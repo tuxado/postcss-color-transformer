@@ -1,0 +1,14 @@
+node_modules
+coverage
+test
+.github
+.vscode
+.idea
+.gitignore
+.eslintrc.js
+.eslintignore
+.editorconfig
+tsconfig.json
+tsup.config.ts
+*.log
+src

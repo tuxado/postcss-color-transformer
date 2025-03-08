@@ -1,0 +1,75 @@
+{
+  "name": "postcss-color-transform",
+  "version": "1.0.0",
+  "description": "Plugin PostCSS pour convertir entre différents formats de couleurs",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint --ext .ts .",
+    "lint:fix": "eslint --ext .ts . --fix",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build && npm run test",
+    "release": "bumpp && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tuxado/postcss-color-transform.git"
+  },
+  "keywords": [
+    "postcss",
+    "postcss-plugin",
+    "css",
+    "color",
+    "converter",
+    "oklch",
+    "hsl",
+    "rgb",
+    "lab",
+    "lch",
+    "hwb",
+    "typescript"
+  ],
+  "author": "Votre Nom <votre-email@example.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tuxado/postcss-color-transform/issues"
+  },
+  "homepage": "https://github.com/tuxado/postcss-color-transform#readme",
+  "peerDependencies": {
+    "postcss": "^8.0.0"
+  },
+  "dependencies": {
+    "culori": "^3.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.10",
+    "@typescript-eslint/eslint-plugin": "^6.3.0",
+    "@typescript-eslint/parser": "^6.3.0",
+    "bumpp": "^9.1.1",
+    "eslint": "^8.45.0",
+    "postcss": "^8.4.26",
+    "tsup": "^7.2.0",
+    "typescript": "^5.1.6",
+    "vitest": "^0.33.0"
+  }
+}
