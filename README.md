@@ -13,7 +13,7 @@ A PostCSS plugin for converting between different color formats.
 ## Installation
 
 ```bash
-npm install postcss-color-transform --save-dev
+npm install postcss-color-transformer --save-dev
 ```
 
 ## Usage
@@ -22,7 +22,7 @@ npm install postcss-color-transform --save-dev
 // postcss.config.js
 module.exports = {
   plugins: [
-    require("postcss-color-transform")({
+    require("postcss-color-transformer")({
       // Options (toutes sont optionnelles)
       verbose: false, // Activer les logs détaillés
       supportedFormats: [

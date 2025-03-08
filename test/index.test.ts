@@ -2,7 +2,7 @@ import postcss from "postcss";
 import { describe, expect, it } from "vitest";
 import plugin from "../src/index";
 
-describe("postcss-color-transform", () => {
+describe("postcss-color-transformer", () => {
   // Helper pour exécuter le plugin
   async function process(input: string, options = {}) {
     return postcss([plugin(options)]).process(input, { from: undefined });

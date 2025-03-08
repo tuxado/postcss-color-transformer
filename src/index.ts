@@ -1,5 +1,5 @@
 /**
- * postcss-color-transform
+ * postcss-color-transformer
  * Plugin PostCSS pour convertir entre différents formats de couleurs
  * @author Votre Nom
  * @license MIT
@@ -49,12 +49,12 @@ const colorConverter: PluginCreator<PluginOptions> = (options = {}) => {
   // Gérer la journalisation en fonction de l'option verbose
   const log = (message: string): void => {
     if (pluginOptions.verbose) {
-      console.log(`[postcss-color-transform] ${message}`);
+      console.log(`[postcss-color-transformer] ${message}`);
     }
   };
 
   return {
-    postcssPlugin: "postcss-color-transform",
+    postcssPlugin: "postcss-color-transformer",
 
     /**
      * Traitement de chaque déclaration CSS
@@ -158,4 +158,4 @@ const colorConverter: PluginCreator<PluginOptions> = (options = {}) => {
 colorConverter.postcss = true;
 
 export default colorConverter;
-export const postcssPlugin = "postcss-color-transform";
+export const postcssPlugin = "postcss-color-transformer";
