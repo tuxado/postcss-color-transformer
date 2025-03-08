@@ -12,9 +12,9 @@ describe("postcss-color-transformer", () => {
   it("convertit les formats explicites", async () => {
     const css = `
       .test {
-        --color1: oklch( from hsl((210 60% 50%)) );
-        --color2: rgb( from oklch((54.32% 0.1287 250.12)) );
-        --color3: hsl( from rgb((255 0 0)) );
+        --color1: oklch( from hsl(210 60% 50%) );
+        --color2: rgb( from oklch(54.32% 0.1287 250.12) );
+        --color3: hsl( from rgb(255 0 0) );
       }
     `;
 
@@ -49,8 +49,6 @@ describe("postcss-color-transformer", () => {
   `;
 
     const result = await process(css);
-
-    console.log(result.warnings());
 
     // Vérifier la conversion sans comparer la valeur exacte
     expect(result.warnings()).toHaveLength(0);

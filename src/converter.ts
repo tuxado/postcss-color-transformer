@@ -24,15 +24,12 @@ export function convertExplicitColor(
   // Analyser les valeurs de couleur
   const colorObject = parseColorValues(fromFormatNormalized, colorValuesStr);
 
-  console.log(colorObject);
-
   // Convertir la couleur entre les formats
   const convertedColor = convertColor(
     colorObject,
     fromFormatNormalized,
     toFormatNormalized
   );
-  console.log(convertedColor);
 
   // Formater le résultat
   return formatColorOutput(convertedColor, toFormatNormalized);

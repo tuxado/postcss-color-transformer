@@ -71,7 +71,7 @@ const colorConverter: PluginCreator<PluginOptions> = (options = {}) => {
       }
 
       // Format: toFormat( from fromFormat((values)));
-      const conversionRegex = /(\w+)\(\s*from\s+(\w+)\(\(([^)]+)\)\)\s*\)/g;
+      const conversionRegex = /(\w+)\s*\(\s*from\s+(\w+)\s*\(([^)]+)\)\s*\)/g;
 
       let newValue = value;
       let match: RegExpExecArray | null;
@@ -111,7 +111,6 @@ const colorConverter: PluginCreator<PluginOptions> = (options = {}) => {
 
             // Effectuer la conversion
             try {
-              console.log(fromFormat, toFormat, colorValues);
               const converted = convertExplicitColor(
                 fromFormat,
                 toFormat,
