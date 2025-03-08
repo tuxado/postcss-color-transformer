@@ -42,10 +42,22 @@ module.exports = {
 };
 ```
 
+CSS source :
+
 ```css
 .test {
-  --color1: oklch(from hsl((210 60% 50%)));
-  --color2: rgb(from oklch((54.32% 0.1287 250.12)));
-  --color3: hsl(from rgb((255 0 0)));
+  --color1: oklch(from hsl(x x x));
+  --color2: rgb(from oklch(x x x));
+  --color3: hsl(from rgb(x x x));
+}
+```
+
+Compiled to :
+
+```css
+.test {
+  --color1: oklch(y y y);
+  --color2: rgb(y y y);
+  --color3: hsl(y y y);
 }
 ```
